@@ -90,7 +90,7 @@ count_a.spec.jai:
 #load "modules/stubborn/run.jai";
 
 #run {
-	args := compiler_get_command_line_arguments();
+    args := get_build_options().compile_time_command_line;
 
 	entrypoint := ifx args.count then args[0] else "";
 	if entrypoint == "test" {
